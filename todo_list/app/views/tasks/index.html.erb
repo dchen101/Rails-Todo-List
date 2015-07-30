@@ -1,1 +1,23 @@
-<h1> Hello! This is your ToDo List. </h1>
+<h1> Hello, we're Gumby TD. And we're here to organize your life. </h1>
+<br><br>
+
+
+<a href="/tasks/new">Add a new task</a>
+
+
+<br><br>
+<h2> Your Gumby List </h2>
+  <table>
+    <tr>
+      <td>Description</td>
+      <td>Completed?</td>
+    </tr>
+
+    <% @tasks.each do |element| %>
+    <tr>
+      <td>  <%= element.description %></td>
+      <td>  <%= element.completed %></td>
+    </tr>
+    <% end %>
+
+  </table>
