@@ -17,6 +17,7 @@
     <tr>
       <td>  <%= element.description %></td>
       <td>  <%= element.completed %></td>
+      <td>  <%= link_to 'Complete task',  "tasks/#{element.id}/completed" %></td>
     </tr>
     <% end %>
 

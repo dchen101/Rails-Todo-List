@@ -13,4 +13,10 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def completed
+    task = Task.find(params[:task_id])
+    task.update_attributes(completed: true)
+    redirect_to tasks_path
+  end
+
 end
